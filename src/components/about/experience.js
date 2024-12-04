@@ -42,7 +42,7 @@ const timelineData = [
     details: (
       <div className="text-black text-center">
         <ul className="list-disc pl-6 text-sm mx-auto">
-          <li>Conducted daily research activities, including data collection and analysis using Microsoft Excel's Pivot Tables.</li>
+          <li>Conducted daily research activities, including data collection and analysis using Microsoft Excel&apos;s Pivot Tables.</li>
           <li>Assisted with citation and formatting for article publications.</li>
           <li>Compiled search terms weekly for analysis.</li>
           <li>Currently involved in research focused on Quantum Computing.</li>
@@ -65,7 +65,7 @@ const timelineData = [
     details: (
       <div className="text-black text-center">
         <ul className="list-disc pl-6 text-sm mx-auto">
-          <li>Crafted high-quality content tailored for specific target keywords, significantly enhancing the website's visibility on search engines.</li>
+          <li>Crafted high-quality content tailored for specific target keywords, significantly enhancing the website&apos;s visibility on search engines.</li>
           <li>Regularly audited and updated older content to maintain its relevance and ranking.</li>
           <li>Engaged in continuous research and training to keep up with evolving SEO best practices.</li>
           <li>Contributed to consistently high-quality content production.</li>

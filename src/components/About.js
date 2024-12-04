@@ -35,7 +35,7 @@ export default function About() {
   useEffect(() => {
     setIsMounted(true);
 
-    let projectsInterval = setInterval(() => {
+    const projectsInterval = setInterval(() => {
       setProjectsCount((prev) => {
         if (prev >= 4) {
           clearInterval(projectsInterval);
@@ -45,7 +45,7 @@ export default function About() {
       });
     }, 100);
 
-    let experienceInterval = setInterval(() => {
+    const experienceInterval = setInterval(() => {
       setExperienceCount((prev) => {
         if (prev >= 1) {
           clearInterval(experienceInterval);
@@ -73,13 +73,12 @@ export default function About() {
         {/* Image Section */}
         <div
           className="lg:w-1/3 w-full border-4 border-black p-2 rounded-lg shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px]"
-          style={{ height: '600px' }} // Fixed height for image container
         >
-          <div className="border-4 border-black rounded-lg h-full overflow-hidden">
+          <div className="border-4 border-black rounded-lg h-[600px] overflow-hidden">
             <Image
               className="rounded-lg object-cover w-full h-full"
               src="/images/image.jpg"
-              alt="Portrait of Ijini Lekamge"
+              alt="Portrait of Ijini Lekamge, highlighting her professional profile"
               width={500}
               height={600}
             />
@@ -89,36 +88,28 @@ export default function About() {
         {/* About Section */}
         <div className="lg:w-2/3 w-full space-y-8">
           <h2 className="text-6xl font-bold text-center text-black mb-8 relative">
-            <TypewriterText text="Hi, I'm Ijini Lekamge" />
+            <TypewriterText text="Hi, I&apos;m Ijini Lekamge" />
           </h2>
           <p className="text-lg leading-relaxed text-black">
             Thank you for visiting my portfolio! ✨<br />
-            <br /> Technology has always been more than just a tool for
-            me—it's a way to create and bring ideas to life 💡. I love blending
-            design and development to build digital experiences that not only
-            work but also stand out 🚀. My journey started with a curiosity for
-            how things work, which grew into a passion for building meaningful
-            projects 💻.<br />
-            <br /> From creating smooth user interfaces to building powerful
-            backends, every project is a chance to learn 📚 and solve problems.
-            With JAMK University of Applied Sciences 🎓, a love for learning, and
-            a drive to take on challenges, I’m here to turn ideas into simple,
-            functional, and creative solutions.<br />
-            <br /> Scroll down to see my work 👇, or let’s connect and make
-            something great together! 🤝
+            <br /> Technology has always been more than just a tool for me—it&apos;s a way to create and bring ideas to life 💡.
+            I love blending design and development to build digital experiences that not only work but also stand out 🚀.
+            My journey started with a curiosity for how things work, which grew into a passion for building meaningful projects 💻.
+            <br />
+            <br /> From creating smooth user interfaces to building powerful backends, every project is a chance to learn 📚 and solve problems.
+            With JAMK University of Applied Sciences 🎓, a love for learning, and a drive to take on challenges, I&apos;m here to turn ideas into simple, functional, and creative solutions.
+            <br />
+            <br /> Scroll down to see my work 👇, or let&apos;s connect and make something great together! 🤝
           </p>
 
           {/* Stats Section */}
-          <div
-            className="flex justify-start items-center space-x-8"
-            style={{ marginTop: '50px' }} // Align stats with the bottom of the image
-          >
+          <div className="flex justify-start items-center space-x-8 mt-12">
             <div className="text-left">
               <h3 className="text-6xl font-bold text-black">{projectsCount}+</h3>
               <p className="mt-2 text-lg">Completed Projects</p>
             </div>
             <div className="text-left">
-              <h3 className="text-6xl font-bold text-black">{experienceCount}+ </h3>
+              <h3 className="text-6xl font-bold text-black">{experienceCount}+</h3>
               <p className="mt-2 text-lg">Years of Experience</p>
             </div>
           </div>
@@ -128,7 +119,7 @@ export default function About() {
       <Skills />
       <Timeline />
       <Education />
-      <AlignTop/>
+      <AlignTop />
       <Footer />
     </div>
   );

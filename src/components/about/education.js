@@ -17,12 +17,16 @@ function EducationSection() {
             <strong>JAMK University of Applied Sciences</strong> (08/2022 - 04/2025) - Jyväskylä, Finland 🎓
           </p>
           <p className="mb-4">
-            I am currently writing my thesis to finish my studies next year. I have participated in many courses from the school's curriculum, including HTML/CSS, JavaScript, SQL and Database Management, Cyber Security, Linux, C#, Python, React, Redux, and more.
+            I am currently writing my thesis to finish my studies next year. I have participated in many courses from the school&apos;s curriculum, including HTML/CSS, JavaScript, SQL and Database Management, Cyber Security, Linux, C#, Python, React, Redux, and more.
           </p>
           <p className="font-bold mb-4">Current GPA: 3.77</p>
-          <button className="px-4 py-2 bg-stone-400 text-white font-medium rounded shadow hover:bg-gray-600 transition">
+          <a
+            href="/academic-record"
+            className="px-4 py-2 bg-stone-400 text-white font-medium rounded shadow hover:bg-gray-600 transition"
+            aria-label="Explore My Academic Record"
+          >
             Explore My Academic Record
-          </button>
+          </a>
         </div>
       </div>
     </section>

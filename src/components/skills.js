@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Paper, Typography, Tooltip } from "@mui/material";
 import { Grid2 } from "@mui/material"; // Use Grid2 instead of Grid
 import { Meteors } from "../components/effects/Meteors"; // Import the Meteors component
+import Image from "next/image"; // Import Image for optimization
 
 const frontendAndBackendSkills = [
   { name: "HTML5", image: "/tech stack/css.svg" },
@@ -96,10 +97,12 @@ export default function Skills() {
             {frontendAndBackendSkills.map((skill, index) => (
               <Grid2 xs={6} sm={4} md={3} key={index} className="flex flex-col items-center">
                 <Tooltip title={skill.name} arrow>
-                  <img
+                  <Image
                     src={skill.image}
                     alt={skill.name}
-                    style={{ width: "60px", height: "60px", marginBottom: "8px" }} // Larger icon size
+                    width={60} // Image optimization
+                    height={60} // Image optimization
+                    style={{ marginBottom: "8px" }}
                   />
                 </Tooltip>
               </Grid2>
@@ -145,7 +148,7 @@ export default function Skills() {
           {/* Content */}
           <Typography
             variant="h6"
-            sx={{ fontSize: "1.8rem", zIndex: 1, fontWeight: "bold"  }} // Ensure content is above the meteors
+            sx={{ fontSize: "1.8rem", zIndex: 1, fontWeight: "bold" }} // Ensure content is above the meteors
             className="text-black text-center mb-6"
           >
             Tools & Others
@@ -154,10 +157,12 @@ export default function Skills() {
             {toolsAndOthersSkills.map((skill, index) => (
               <Grid2 xs={6} sm={4} md={3} key={index} className="flex flex-col items-center">
                 <Tooltip title={skill.name} arrow>
-                  <img
+                  <Image
                     src={skill.image}
                     alt={skill.name}
-                    style={{ width: "60px", height: "60px", marginBottom: "8px" }} // Larger icon size
+                    width={60} // Image optimization
+                    height={60} // Image optimization
+                    style={{ marginBottom: "8px" }}
                   />
                 </Tooltip>
               </Grid2>
