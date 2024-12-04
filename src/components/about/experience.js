@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FaBriefcase } from 'react-icons/fa';
 import { GiPlanetConquest } from 'react-icons/gi'; // Named import
-import { CloseSharp } from '@mui/icons-material/CloseSharp';
+import { CloseSharp } from '@mui/icons-material';
 
 const timelineData = [
   { 
