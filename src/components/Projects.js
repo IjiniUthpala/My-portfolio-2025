@@ -40,56 +40,57 @@ const Projects = () => {
       <header>
         <Navbar />
       </header>
-      <section id="projects" className="container mx-auto p-10">
-      <h1 className="text-4xl font-bold text-center text-black mb-12">Projects</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <section id="projects" className="container mx-auto p-6 sm:p-10">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-black mb-8 sm:mb-12">Projects</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, idx) => (
             <div 
               key={idx} 
-              className="rounded-lg overflow-hidden bg-white shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px] transform transition-all duration-300 ease-in-out hover:scale-105 border-4 border-black" // Outer border
+              className="rounded-lg overflow-hidden bg-white shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px] transform transition-all duration-300 ease-in-out hover:scale-105 border-4 border-black"
             >
               {/* Padding inside the video container */}
-              <div className="p-4">
+              <div className="p-2 sm:p-4">
                 <video 
-                  className="w-full h-48 object-cover rounded-md border-4 border-black" // Inner video border
+                  className="w-full h-36 sm:h-48 object-cover rounded-md border-4 border-black" // Adjusted video height for mobile
                   src={project.video} 
                   alt={project.title} 
                   muted 
                   loop 
                   autoPlay
+                  // Disabled click functionality for mobile view
+                  playsInline
                 />
               </div>
-              <div className="p-4">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                <div className="mt-4 space-x-4">
-                <a 
-                  href={project.demo} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                >
-                  View Demo
-                </a>
-                <a 
-                  href={project.source} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900"
-                >
-                  View Source Code
-                </a>
-              </div>
+              <div className="p-2 sm:p-4">
+                <h3 className="text-lg sm:text-xl font-bold">{project.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-lg">{project.description}</p>
+                <div className="mt-4 space-x-2 sm:space-x-4">
+                  <a 
+                    href={project.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-3 py-1 sm:px-4 sm:py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm sm:text-base"
+                  >
+                    View Demo
+                  </a>
+                  <a 
+                    href={project.source} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-800 text-white rounded hover:bg-gray-900 text-sm sm:text-base"
+                  >
+                    View Source Code
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
-      <SnakeAnimation/>
-      <AlignTop/>
-      <Footer/>
+      <SnakeAnimation />
+      <AlignTop />
+      <Footer />
     </div>
-    
   );
 };
 

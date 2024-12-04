@@ -11,17 +11,17 @@ const Footer = () => {
       }}
     >
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-6">
           {/* Left section - Copyright */}
-          <div className="text-left w-full md:w-auto">
-            <p className="text-lg">
+          <div className="w-full sm:w-auto text-center sm:text-left">
+            <p className="text-sm sm:text-lg">
               &copy; {new Date().getFullYear()} All Rights Reserved. 🩷
             </p>
           </div>
           
           {/* Center section - Built by Ijini */}
-          <div className="text-center w-full md:w-auto mt-4 md:mt-0">
-            <p className="text-lg">
+          <div className="w-full sm:w-auto text-center sm:text-left">
+            <p className="text-sm sm:text-lg">
               Coded by Ijini 🙋‍♀️
             </p>
           </div>

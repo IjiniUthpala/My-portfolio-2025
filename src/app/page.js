@@ -59,9 +59,11 @@ export default function Home() {
               A passionate full-stack developer blending creativity with cutting-edge technology...
             </p>
             <div className="mt-6 space-x-4">
+            <a href="/Ijini Cv.pdf" target="_blank" rel="noopener noreferrer">
               <button className="px-4 py-2 bg-black border text-white border-black rounded">
                 Resume
               </button>
+            </a>
               <a
                 href="/contact" 
                 target="_blank"

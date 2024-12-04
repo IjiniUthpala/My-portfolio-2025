@@ -18,7 +18,7 @@ const HireMe = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center w-48 h-48 mx-auto">
+    <div className="relative items-center justify-center w-48 h-48 mx-auto hidden lg:flex">
       {/* Rotating Text */}
       <div
         ref={circleRef}
@@ -34,17 +34,16 @@ const HireMe = () => {
             <path
               id="circlePath"
               d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
-            /> {/* Smaller radius for text circle */}
+            />
           </defs>
           <text fontSize="9" fontWeight="bold" fill="black">
-            <textPath href="#circlePath" textLength="440"> 
-              Junior Fullstack Developer • Frontend  • Creative Thinker •
+            <textPath href="#circlePath" textLength="440">
+              Junior Fullstack Developer • Frontend • Creative Thinker •
             </textPath>
           </text>
         </svg>
       </div>
 
-      
       <a
         className="z-10 flex items-center justify-center w-16 h-16 bg-black text-white rounded-full text-center text-sm font-bold"
       >

@@ -2,15 +2,17 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import Logo from "./Logo";
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <nav className="bg-[#F5F5F5] text-black py-2 ">
+    <nav className="relative bg-[#F5F5F5] text-black py-2">
       {/* Mobile Burger Icon */}
       <div className="lg:hidden flex justify-between items-center px-4">
         <button onClick={toggleMenu} className="text-black">
@@ -29,56 +31,105 @@ export default function Navbar() {
             />
           </svg>
         </button>
-
-        {/* Social Links for Mobile */}
-        <div className="lg:hidden flex items-center space-x-4">
-          <a
-            href="https://github.com/ijini"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-gray-700"
-          >
-            <FaGithub className="w-6 h-6" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ijini-lekamge-38233928b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-gray-700"
-          >
-            <FaLinkedin className="w-6 h-6" />
-          </a>
-        </div>
       </div>
 
-      {/* Navbar Links */}
-      <div
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } lg:flex justify-between items-center`}
-      >
-        {/* Left Links */}
-        <div className="flex flex-col lg:flex-row lg:gap-8 mt-6 lg:mt-8 pr-16 lg:pl-20"> {/* Adjusted padding-right */}
-          <Link href="/" className="text-black hover:underline block">
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
+          onClick={closeMenu} // Close menu when clicking the background
+        >
+          {/* Prevent closing when clicking inside the menu */}
+          <div
+            className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg text-center"
+            onClick={(e) => e.stopPropagation()} // Stop click propagation
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeMenu}
+              className="absolute top-4 right-4 text-white p-2 bg-gray-800 rounded-full"
+            >
+              ✖
+            </button>
+
+            {/* Centered Links */}
+            <ul className="text-black text-lg space-y-4">
+              <li>
+                <Link href="/" className="hover:underline" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:underline"
+                  onClick={closeMenu}
+                >
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/achievements"
+                  className="hover:underline"
+                  onClick={closeMenu}
+                >
+                  Achievements
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  className="hover:underline"
+                  onClick={closeMenu}
+                >
+                  Projects
+                </Link>
+              </li>
+            </ul>
+
+            {/* Social Icons */}
+            <div className="mt-6 flex justify-center gap-4">
+              <a
+                href="https://github.com/IjiniUthpala"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-gray-700"
+              >
+                <FaGithub className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ijini-lekamge-38233928b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 hover:text-blue-500"
+              >
+                <FaLinkedin className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop Navbar */}
+      <div className="hidden lg:flex justify-between items-center px-8">
+        <div className="flex gap-8">
+          <Link href="/" className="text-black hover:underline">
             Home
           </Link>
-          <Link href="/about" className="text-black hover:underline block">
+          <Link href="/about" className="text-black hover:underline">
             Profile
           </Link>
-          <Link
-            href="/achievements"
-            className="text-black hover:underline block"
-          >
+          <Link href="/achievements" className="text-black hover:underline">
             Achievements
           </Link>
-          <Link href="/projects" className="text-black hover:underline block">
+          <Link href="/projects" className="text-black hover:underline">
             Projects
           </Link>
         </div>
 
-        {/* Right Icons */}
-        <div className="flex items-center gap-4 pr-6 lg:mt-8 lg:pr-20">
-          
+        {/* Social Icons & Hire Me */}
+        <div className="hidden lg:flex items-center gap-4">
           <a
             href="https://github.com/IjiniUthpala"
             target="_blank"
@@ -95,10 +146,12 @@ export default function Navbar() {
           >
             <FaLinkedin className="w-6 h-6" />
           </a>
+          
         </div>
       </div>
-      {/* LOGO */}
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+
+      {/* Centered Logo */}
+      <div className="absolute left-[50%] top-2 transform -translate-x-1/2">
         <Logo />
       </div>
     </nav>

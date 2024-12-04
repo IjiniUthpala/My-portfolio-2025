@@ -8,7 +8,7 @@ function EducationSection() {
       </h2>
       <div className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end p-8 rounded-lg max-w-3xl mx-auto
                       border-t-1 border-l-8 border-r-1 border-b-8 border-black shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px] relative
-                      animate-gradient-pulse"> {/* Apply the gradient pulse animation */}
+                      animate-gradient-pulse px-6 sm:px-12 md:px-16"> {/* Further increase padding on mobile */}
         <div className="text-black">
           <p className="text-lg mb-4 font-medium">
             Bachelor of Engineering and Information Technology
@@ -19,11 +19,13 @@ function EducationSection() {
           <p className="mb-4">
             I am currently writing my thesis to finish my studies next year. I have participated in many courses from the school&apos;s curriculum, including HTML/CSS, JavaScript, SQL and Database Management, Cyber Security, Linux, C#, Python, React, Redux, and more.
           </p>
-          <p className="font-bold mb-4">Current GPA: 3.77</p>
+          <p className="font-bold mb-4">Current GPA: 3.85</p>
           <a
-            href="/academic-record"
+            href="/transcript.pdf"
             className="px-4 py-2 bg-stone-400 text-white font-medium rounded shadow hover:bg-gray-600 transition"
             aria-label="Explore My Academic Record"
+            target="_blank" // Opens the PDF in a new tab
+            rel="noopener noreferrer" // For security reasons when using target="_blank"
           >
             Explore My Academic Record
           </a>

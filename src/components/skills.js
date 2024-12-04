@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { Stack, Paper, Typography, Tooltip } from "@mui/material";
 import { Grid2 } from "@mui/material"; // Use Grid2 instead of Grid
@@ -47,14 +49,14 @@ export default function Skills() {
         flexWrap="wrap"
         sx={{
           gap: { xs: "16px", sm: "32px" },
-          padding: { xs: "0 10px", sm: "0" },
+          padding: { xs: "0 24px", sm: "0 40px" }, // Increased padding for left and right on mobile and larger screens
         }}
       >
         {/* Frontend + Backend Skills Box */}
         <Paper
           elevation={3}
           sx={{
-            width: { xs: "90%", sm: "38%" },
+            width: { xs: "100%", sm: "38%" },
             padding: "20px",
             display: "flex",
             flexDirection: "column",
@@ -68,6 +70,7 @@ export default function Skills() {
             borderLeft: "9px solid black", // Top black border
             borderBottom: "4px solid black", // Bottom black border
             shadow: "rgba(0, 0, 0, 0.5) -10px 0px 15px 0px", // Left-side shadow
+            margin: { xs: "16px 0", sm: "0" }, // More space from the sides on mobile
           }}
         >
           {/* Meteor effect as background */}
@@ -114,7 +117,7 @@ export default function Skills() {
         <Paper
           elevation={3}
           sx={{
-            width: { xs: "90%", sm: "38%" },
+            width: { xs: "100%", sm: "38%" },
             padding: "20px",
             display: "flex",
             flexDirection: "column",
@@ -128,6 +131,7 @@ export default function Skills() {
             borderLeft: "9px solid black",
             borderBottom: "4px solid black", // Bottom black border
             shadow: "rgba(0, 0, 0, 0.5) -10px 0px 15px 0px", // Left-side shadow
+            margin: { xs: "16px 0", sm: "0" }, // More space from the sides on mobile
           }}
         >
           {/* Meteor effect as background */}

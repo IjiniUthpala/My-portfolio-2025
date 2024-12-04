@@ -32,9 +32,9 @@ const SnakeAnimation = () => {
   }, [activeBlocks, snake]);
 
   return (
-    <div className="w-full h-32 bg-[#F5F5F5] flex flex-wrap items-center justify-center relative">
+    <div className="hidden sm:flex w-full h-32 bg-[#F5F5F5] flex-wrap items-center justify-center relative">
       {/* Snake Grid */}
-      <div className="flex flex-wrap w-4/5 gap-1"> {/* Added gap-1 for spacing */}
+      <div className="flex flex-wrap w-4/5 gap-1">
         {Array.from({ length: totalBlocks }, (_, i) => (
           <div
             key={i}
