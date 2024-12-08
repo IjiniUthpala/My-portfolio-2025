@@ -112,8 +112,8 @@ export default function Navbar() {
       )}
 
       {/* Desktop Navbar */}
-      <div className="hidden lg:flex justify-between items-center px-8">
-        <div className="flex gap-8">
+      <div className="hidden lg:flex justify-between items-center px-10 mt-6">
+        <div className="flex gap-12">
           <Link href="/" className="text-black hover:underline">
             Home
           </Link>
