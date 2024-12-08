@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { FaBriefcase } from 'react-icons/fa';
-import { GiPlanetConquest } from 'react-icons/gi'; // Named import
+import { HiLightBulb } from "react-icons/hi2";
 import { CloseSharp } from '@mui/icons-material';
 
 const timelineData = [
@@ -15,8 +15,8 @@ const timelineData = [
         </>
       ), 
     icon: FaBriefcase, 
-    color: 'bg-white', // White background for the box
-    borderColor: 'border-black', // Black border
+    color: 'bg-white', 
+    borderColor: 'border-black',
     details: (
       <div className="text-black text-center">
         <ul className="list-disc pl-6 text-sm mx-auto">
@@ -99,9 +99,9 @@ const Timeline = () => {
             key={milestone.id}
             className={`mb-8 flex flex-col md:flex-row items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
           >
-            {/* Date Circle with Light Bulb Icon */}
+            
             <div className="bg-white p-4 rounded-full border-4 border-black shadow-md z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-              <GiPlanetConquest className="text-yellow-500 text-4xl" />
+              <HiLightBulb className="text-black text-4xl" />
             </div>
 
             {/* Milestone Button with hover animation */}

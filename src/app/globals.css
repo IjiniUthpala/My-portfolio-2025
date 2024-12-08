@@ -21,13 +21,7 @@ body {
   
 }
 
-/* Add the glowing effect for text */
-.glowing-text {
-  text-shadow: 
-    0 0 3px #fff,   /* Small white glow */
-    0 0 5px #fff,   /* Slightly larger white glow */
-    0 0 7px #00bfff; /* Subtle blue glow */
-}
+
 
 
 /* Meteor effect styles */

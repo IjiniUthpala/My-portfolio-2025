@@ -106,11 +106,11 @@ export default function About() {
           <div className="flex justify-start items-center space-x-8 mt-12">
             <div className="text-left">
               <h3 className="text-6xl font-bold text-black">{projectsCount}+</h3>
-              <p className="mt-2 text-lg">Completed Projects</p>
+              <p className="mt-2 text-lg text-black">Completed Projects</p>
             </div>
             <div className="text-left">
               <h3 className="text-6xl font-bold text-black">{experienceCount}+</h3>
-              <p className="mt-2 text-lg">Years of Experience</p>
+              <p className="mt-2 text-lg text-black">Years of Experience</p>
             </div>
           </div>
         </div>

@@ -37,7 +37,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div
           className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
-          onClick={closeMenu} // Close menu when clicking the background
+          onClick={closeMenu} 
         >
           {/* Prevent closing when clicking inside the menu */}
           <div
