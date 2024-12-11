@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <div className="bg-[#F5F5F5] min-h-screen py-12">
       <div className="container mx-auto px-6">
-        <h1 className="text-4xl font-semibold text-center mb-8">Contact Me</h1>
+        <h1 className="text-4xl font-semibold text-center mb-8 text-black">Contact Me</h1>
 
         {/* Contact Form */}
         <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
@@ -50,7 +50,7 @@ const ContactPage = () => {
                 id="message"
                 name="message"
                 rows="4"
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm text-black"
                 placeholder="Your Message"
                 required
               ></textarea>
