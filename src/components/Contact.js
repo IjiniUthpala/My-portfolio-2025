@@ -20,7 +20,7 @@ const ContactPage = () => {
                 type="text"
                 id="name"
                 name="name"
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm text-black"
                 placeholder="Your Name"
                 required
               />
@@ -35,7 +35,7 @@ const ContactPage = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-black focus:border-black sm:text-sm text-black"
                 placeholder="Your Email"
                 required
               />
@@ -70,7 +70,7 @@ const ContactPage = () => {
 
         {/* Other Contact Options */}
         <div className="mt-12 text-center">
-          <p className="text-lg mb-4">Or reach me through:</p>
+          <p className="text-lg mb-4 text-black">Or reach me through:</p>
           <div className="flex justify-center space-x-6">
             {/* Email */}
             <a href="mailto:uthpalaleka@gmail.com" className="text-black hover:text-gray-800 flex flex-col items-center">
