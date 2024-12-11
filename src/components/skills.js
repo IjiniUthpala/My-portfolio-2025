@@ -49,6 +49,7 @@ export default function Skills() {
         sx={{
           gap: { xs: "16px", sm: "32px" },
           padding: { xs: "0 24px", sm: "0 40px" },
+          position: "relative"
         }}
       >
         <Paper

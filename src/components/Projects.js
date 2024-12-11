@@ -40,8 +40,8 @@ const Projects = () => {
       <header>
         <Navbar />
       </header>
-      <section id="projects" className="container mx-auto p-6 sm:p-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center text-black mb-8 sm:mb-12">Projects</h1>
+      <section id="projects" className="min-h-screen py-8 px-6 md:px-12 lg:px-24 mt-8 sm:mt-6 lg:mt-4 xl:mt-">
+        <h1 className="text-4xl font-bold text-center text-black mb-12">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, idx) => (
             <div 
@@ -51,18 +51,17 @@ const Projects = () => {
               {/* Padding inside the video container */}
               <div className="p-2 sm:p-4">
                 <video 
-                  className="w-full h-36 sm:h-48 object-cover rounded-md border-4 border-black" // Adjusted video height for mobile
+                  className="w-full h-36 sm:h-48 object-cover rounded-md border-4 border-black" 
                   src={project.video} 
                   alt={project.title} 
                   muted 
                   loop 
                   autoPlay
-                  // Disabled click functionality for mobile view
                   playsInline
                 />
               </div>
               <div className="p-2 sm:p-4">
-                <h3 className="text-lg sm:text-xl font-bold">{project.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-black">{project.title}</h3>
                 <p className="text-gray-600 text-sm sm:text-lg">{project.description}</p>
                 <div className="mt-4 space-x-2 sm:space-x-4">
                   <a 

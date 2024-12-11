@@ -1,8 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBriefcase } from 'react-icons/fa';
 import { HiLightBulb } from "react-icons/hi2";
 import { CloseSharp } from '@mui/icons-material';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Don't forget to import the AOS CSS
 
 const timelineData = [
   { 
@@ -86,11 +87,18 @@ const Timeline = () => {
     setSelectedMilestone(null);
   };
 
+  // Initialize AOS when component mounts
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation
+      easing: 'ease-out-back', // Animation easing
+      once: true, // Animation happens only once when scrolling
+    });
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-6xl font-bold text-center text-black mb-16">
-        Experience
-      </h2>
+      <h2 className="text-6xl font-bold text-center text-black mb-16">Experience</h2>
       <div className="relative flex flex-col items-center">
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-r-4 border-gray-400"></div>
 
@@ -99,13 +107,15 @@ const Timeline = () => {
             key={milestone.id}
             className={`mb-8 flex flex-col md:flex-row items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
           >
-            
+            {/* Bulb Icon stays in place */}
             <div className="bg-white p-4 rounded-full border-4 border-black shadow-md z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
               <HiLightBulb className="text-black text-4xl" />
             </div>
 
-            {/* Milestone Button with hover animation */}
+            {/* Milestone Box with hover animation and AOS scroll animation */}
             <div
+              data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'} // Apply AOS animation (from left or right)
+              data-aos-offset="100" // Trigger animation after scrolling 100px
               className={`mt-4 md:mt-0 ml-8 md:ml-10 mr-8 md:mr-10 w-full md:w-5/12 px-10 py-8 rounded-lg border-4 ${milestone.borderColor} bg-white cursor-pointer relative animate-gradient-bg shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px] transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-[rgba(0,0,0,0.7)_-5px_0px_25px_0px]`}
             >
               <button

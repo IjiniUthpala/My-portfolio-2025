@@ -6,9 +6,10 @@ function EducationSection() {
       <h2 className="text-6xl font-bold text-center text-black mb-16">
         Education
       </h2>
-      <div className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end p-8 rounded-lg max-w-3xl mx-auto
+      <div className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end p-8 rounded-lg max-w-3xl
+                      mx-4 sm:mx-8 md:mx-16 lg:mx-20
                       border-t-1 border-l-8 border-r-1 border-b-8 border-black shadow-[rgba(0,0,0,0.5)_-10px_0px_15px_0px] relative
-                      animate-gradient-pulse px-6 sm:px-12 md:px-16"> {/* Further increase padding on mobile */}
+                      animate-gradient-pulse"> 
         <div className="text-black">
           <p className="text-lg mb-4 font-medium">
             Bachelor of Engineering and Information Technology
@@ -24,8 +25,8 @@ function EducationSection() {
             href="/transcript.pdf"
             className="px-4 py-2 bg-stone-400 text-white font-medium rounded shadow hover:bg-gray-600 transition"
             aria-label="Explore My Academic Record"
-            target="_blank" // Opens the PDF in a new tab
-            rel="noopener noreferrer" // For security reasons when using target="_blank"
+            target="_blank"
+            rel="noopener noreferrer" 
           >
             Explore My Academic Record
           </a>
