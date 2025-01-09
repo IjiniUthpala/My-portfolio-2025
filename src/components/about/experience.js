@@ -11,6 +11,30 @@ const timelineData = [
     date: '2020', 
     title: (
         <>
+          Junior Developer @Retink Media <br /> Bonn, Germany<br />
+          Dec 2024 - Present
+        </>
+      ), 
+    icon: FaBriefcase, 
+    color: 'bg-white', 
+    borderColor: 'border-black',
+    details: (
+      <div className="text-black text-center">
+        <ul className="list-disc pl-6 text-sm mx-auto">
+          <li>Develop and maintain a new product using Tailwind CSS and Next.js</li>
+          <li>Identify and fix bugs to ensure optimal functionality.</li>
+          <li>Ensure the web design is mobile-responsive for a seamless user experience</li>
+          <li>Respond to development team requests to support ongoing tasks</li>
+          <li>Participate in daily scrum meetings for project updates and team collaboration.</li>
+        </ul>
+      </div>
+    )
+  },
+  { 
+    id: 2, 
+    date: '2020', 
+    title: (
+        <>
           Fullstack Intern @ Unfair Advantage Oy <br /> Helsinki, Finland<br />
           July 2024 - November 2024
         </>
@@ -25,11 +49,21 @@ const timelineData = [
           <li>Responsible for transitioning project files into the Material UI framework, optimizing UI elements, and enhancing the user experience.</li>
           <li>Attended daily SCRUM meetings to report task progress and contribute new design and feature ideas.</li>
         </ul>
+        <div className="mt-4">
+          <a
+            href="/images/work_certificate.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+          >
+            View Certificate
+          </a>
+        </div>
       </div>
     )
   },
   { 
-    id: 2, 
+    id: 3, 
     date: '2024', 
     title: (
       <>
@@ -49,10 +83,11 @@ const timelineData = [
           <li>Currently involved in research focused on Quantum Computing.</li>
         </ul>
       </div>
+    
     )
   },
   { 
-    id: 3, 
+    id: 4, 
     date: '2024', 
     title: (
         <>

@@ -139,7 +139,7 @@ export default function Navbar() {
             <FaGithub className="w-6 h-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/ijini-lekamge-38233928b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            href="https://www.linkedin.com/in/ijini-lekamge-38233928b/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-700 hover:text-blue-500"

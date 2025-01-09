@@ -81,7 +81,7 @@ const ContactPage = () => {
             </a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/ijini-lekamge-38233928b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" className="text-black hover:text-gray-800 flex flex-col items-center">
+            <a href="https://www.linkedin.com/in/ijini-lekamge-38233928b/" target="_blank" className="text-black hover:text-gray-800 flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12h2m-6 6h2m4-10H8m-2 6h.01M4 16h16M4 20h16M8 16v4m0-12V8m8 0v4m0 4v4m0-12V8" />
               </svg>
