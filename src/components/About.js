@@ -37,9 +37,9 @@ export default function About() {
 
     const projectsInterval = setInterval(() => {
       setProjectsCount((prev) => {
-        if (prev >= 4) {
+        if (prev >= 10) {
           clearInterval(projectsInterval);
-          return 4;
+          return 10;
         }
         return prev + 1;
       });

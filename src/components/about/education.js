@@ -15,13 +15,21 @@ function EducationSection() {
             Bachelor of Engineering and Information Technology
           </p>
           <p className="mb-2">
-            <strong>JAMK University of Applied Sciences</strong> (08/2022 - 12/2025) - Jyväskylä, Finland 🎓
+            <strong>JAMK University of Applied Sciences</strong> (08/2022 - 05/2025) – Jyväskylä, Finland 🎓
           </p>
           <p className="mb-4">
-            I am currently writing my thesis to finish my studies next year. I have participated in many courses from the school&apos;s curriculum, including HTML/CSS, JavaScript, SQL and Database Management, Cyber Security, Linux, C#, Python, React, Redux, and more.
+            Graduated with a Bachelor’s degree in Engineering and Information Technology, with a concentration in software engineering, data analytics, and AI. My thesis, titled “Utilizing Artificial Intelligence to Advance Quantum Computing Capabilities”, explored how modern AI techniques can be used to enhance the potential of quantum computing systems.
           </p>
-          <p className="font-bold mb-4">Current GPA: 3.85</p>
-          
+          <p className="font-bold mb-4">Weighted Average: 4.09 / 5.00</p>
+          <p className="font-bold mb-8">Thesis Grade: 5</p>
+
+          {/* Button inside the box */}
+          <button
+            onClick={() => window.open('/certificate.pdf', '_blank')}
+            className="px-6 py-3 text-white font-semibold bg-black rounded-2xl hover:bg-opacity-80 transition duration-300 shadow-lg"
+          >
+            View Full Transcript
+          </button>
         </div>
       </div>
     </section>
